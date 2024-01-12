@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body style="background-image:url({% static 'image/register.png' %}">
+<center>
+    <form method="post" action="{% url 'register' %}">
+        {%csrf_token %}
+        <br><b>
+        <br>
+        <br>
+        {{ form.as_p }}
+        </b>
+        <button type="submit">Register</button>
+
+    </form>
+</center>
+</body>
+{% endblock %}

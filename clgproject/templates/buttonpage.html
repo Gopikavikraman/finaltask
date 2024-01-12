@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>buttonpage</title>
+</head>
+{% block content %}
+<body style="background-image:url({% static 'image/register.png' %}">
+<br>
+<br>
+<br>
+<br><br>
+<br><center>
+<h4 style="font-family:Georgia;color: DarkSlateGray;">Everything you want is here....</h4></center>
+<form action="click here" method="post">
+    {% csrf_token %}
+    <br>
+    <br>
+   <center>  <a href="{% url 'clgapp:newpage' %}"><button type="button">click here</button></a></center>
+
+</form>
+</body>
+{% endblock %}
+</html>
